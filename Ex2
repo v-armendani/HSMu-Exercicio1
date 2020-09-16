@@ -1,0 +1,87 @@
+import javax.swing.JOptionPane;
+ 
+ public class Ex2 {
+	 
+ 	public static void main (String[]args) {
+ 		
+ 		String nome, p1b, proj1b, ex1b, p2b, proj2b, ex2b, p3b, proj3b, ex3b, p4b, proj4b, ex4b, nAF;
+ 		double notap1b, notaproj1b, notaex1b, notap2b, notaproj2b, notaex2b, notap3b, notaproj3b, notaex3b, notap4b, notaproj4b, notaex4b, AF, n1b, n2b, n3b, n4b, media;
+ 		
+ 		
+ 		nome = JOptionPane.showInputDialog("Digite o nome do aluno");
+ 
+ 		
+ 		p1b = JOptionPane.showInputDialog("Digite a nota da prova do 1º bimestre");
+ 		notap1b = Double.parseDouble(p1b);
+ 		
+ 		proj1b = JOptionPane.showInputDialog("Digite a nota do projeto do 1º bimestre");
+ 		notaproj1b = Double.parseDouble(proj1b);
+ 		
+ 		ex1b = JOptionPane.showInputDialog("Digite a nota dos exercícios do 1º bimestre");
+ 		notaex1b = Double.parseDouble(ex1b);
+ 		
+ 		p2b = JOptionPane.showInputDialog("Digite a nota da prova do 2º bimestre");
+ 		notap2b = Double.parseDouble(p2b);
+ 		
+ 		proj2b = JOptionPane.showInputDialog("Digite a nota do projeto do 2º bimestre");
+ 		notaproj2b = Double.parseDouble(proj2b);
+ 		
+ 		ex2b = JOptionPane.showInputDialog("Digite a nota dos exercícios do 2º bimestre");
+ 		notaex2b = Double.parseDouble(ex2b);
+ 		
+ 		p3b = JOptionPane.showInputDialog("Digite a nota da prova do 3º bimestre");
+ 		notap3b = Double.parseDouble(p3b);
+ 		
+ 		proj3b = JOptionPane.showInputDialog("Digite a nota do projeto do 3º bimestre");
+ 		notaproj3b = Double.parseDouble(proj3b);
+ 		
+ 		ex3b = JOptionPane.showInputDialog("Digite a nota dos exercícios do 3º bimestre");
+ 		notaex3b = Double.parseDouble(ex3b);
+ 		
+ 		p4b = JOptionPane.showInputDialog("Digite a nota da prova do 4º bimestre");
+ 		notap4b = Double.parseDouble(p4b);
+ 		
+ 		proj4b = JOptionPane.showInputDialog("Digite a nota do projeto do 4º bimestre");
+ 		notaproj4b = Double.parseDouble(proj4b);
+ 		
+ 		ex4b = JOptionPane.showInputDialog("Digite a nota dos exercícios do 4º bimestre");
+ 		notaex4b = Double.parseDouble(ex4b);
+ 		
+ 		n1b = ((notap1b*5)+(notaproj1b*3)+(notaex1b*2))/10;
+
+ 		n2b = ((notap2b*5)+(notaproj2b*3)+(notaex2b*2))/10;
+ 		
+ 		n3b = ((notap3b*5)+(notaproj3b*3)+(notaex3b*2))/10;
+ 		
+ 		n4b = ((notap4b*5)+(notaproj4b*3)+(notaex4b*2))/10;
+ 		
+ 		media = (n1b + n2b + n3b + n4b)/4;
+ 		
+ 		if (media>=8) {
+ 			
+ 			JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A média do aluno é "+media,
+						"Aluno Aprovado",JOptionPane.INFORMATION_MESSAGE);
+ 		}
+ 		else {
+ 			
+			JOptionPane.showMessageDialog(null,"Aluno " +nome+"\n"+"A media do aluno é "+ media,
+						"Deverá fazer a Avaliação Final", JOptionPane.WARNING_MESSAGE);
+			nAF = JOptionPane.showInputDialog("Digite a nota da Avaliação Final");
+			
+			AF = Double.parseDouble(nAF);
+			media = (AF + media)/2;
+			
+			if (AF>=8) {
+				
+ 				JOptionPane.showMessageDialog(null,"Aluno" +nome+"\n"+"A média do aluno é "+nAF,
+						"Aluno Aprovado",JOptionPane.INFORMATION_MESSAGE);
+ 			}
+ 			else {
+ 				
+ 				JOptionPane.showMessageDialog(null,"Aluno" +nome+"\n"+"A media do aluno é "+nAF,
+						"Reprovado", JOptionPane.WARNING_MESSAGE);
+ 			}
+ 		} 	
+ 		System.exit(0);
+ 	}
+ }
